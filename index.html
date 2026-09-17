@@ -1,150 +1,123 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-BE">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caputo — Mode &amp; décoration à Etterbeek</title>
-<meta name="description" content="Caputo, boutique de mode et de décoration à la Galerie du Cinquantenaire, Avenue de Tervueren 32, 1040 Etterbeek. Appelez-nous au 0485 74 51 73.">
+<title>Caputo — Tailleur sur mesure à Etterbeek (Cinquantenaire)</title>
+<meta name="description" content="Caputo, tailleur sur mesure à Etterbeek : Galerie du Cinquantenaire, Avenue de Tervueren 32. Vêtements sur mesure, tissus et finitions. Téléphone : 0485 74 51 73.">
 <meta name="geo.region" content="BE-BRU">
 <meta name="geo.placename" content="Etterbeek">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <style>
   :root{
-    --ink:#1d1c1a;
-    --ink-soft:#54504a;
-    --paper:#faf8f4;
-    --paper-2:#f2ede5;
-    --line:#e3dbcf;
-    --accent:#8a6b4f;
-    --accent-soft:#f0e7dc;
+    --ink:#16202b;
+    --ink-soft:#4a5866;
+    --paper:#f8f9fb;
+    --paper-2:#eef2f7;
+    --line:#d7dfe9;
+    --blue:#1f4e79;
+    --blue-deep:#14314c;
+    --blue-soft:#e3ecf5;
+    --velvet:#2a3242;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
+    margin:0;background:var(--paper);color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
+    line-height:1.62;-webkit-font-smoothing:antialiased;
   }
-  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-0.01em;margin:0;}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.01em;margin:0;}
   a{color:inherit;}
-  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
 
-  /* En-tête */
-  header.top{
-    position:sticky;top:0;z-index:20;
-    background:rgba(250,248,244,.94);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
+  /* Texture discrète de tissu à carreaux */
+  .plaid{
+    background-image:
+      repeating-linear-gradient(0deg, rgba(31,78,121,.05) 0 1px, transparent 1px 8px),
+      repeating-linear-gradient(90deg, rgba(31,78,121,.05) 0 1px, transparent 1px 8px);
   }
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px;}
+
+  header.top{position:sticky;top:0;z-index:20;background:rgba(248,249,251,.95);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px;}
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
-  .monogram{
-    width:38px;height:38px;border-radius:50%;
-    background:var(--ink);color:var(--paper);
-    display:flex;align-items:center;justify-content:center;
-    font-family:Georgia,serif;font-size:17px;font-weight:700;
-  }
-  .brand b{font-size:17px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;}
-  .brand small{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;}
+  .monogram{width:38px;height:38px;border-radius:6px;background:var(--blue);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:18px;font-weight:700;}
+  .brand b{font-size:16.5px;letter-spacing:.1em;text-transform:uppercase;}
+  .brand small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);}
   .top nav{display:flex;gap:18px;font-size:13.5px;}
   .top nav a{text-decoration:none;color:var(--ink-soft);}
-  .top nav a:hover{color:var(--accent);}
-  .call-btn{
-    display:inline-flex;align-items:center;gap:8px;
-    background:var(--accent);color:#fff;text-decoration:none;
-    padding:9px 16px;border-radius:999px;font-size:13.5px;font-weight:600;
-    white-space:nowrap;
-  }
-  .call-btn:hover{background:#755a41;}
+  .top nav a:hover{color:var(--blue);}
+  .call-btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;
+    text-decoration:none;padding:10px 16px;border-radius:6px;font-size:13.5px;font-weight:600;white-space:nowrap;}
+  .call-btn:hover{background:var(--blue-deep);}
 
-  /* Hero */
-  .hero{
-    padding:56px 0 44px;
-    background:
-      radial-gradient(1100px 380px at 78% -10%, var(--accent-soft) 0%, rgba(240,231,220,0) 62%),
-      var(--paper);
-  }
-  .hero .eyebrow{
-    font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
-    color:var(--accent);font-weight:700;margin-bottom:14px;
-  }
-  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.1;}
-  .hero p.lead{font-size:17px;color:var(--ink-soft);max-width:38em;margin:16px 0 26px;}
+  .hero{padding:54px 0 46px;background:linear-gradient(180deg,var(--blue-soft) 0%,rgba(227,236,245,0) 70%),var(--paper);}
+  .eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:14px;}
+  .hero h1{font-size:clamp(29px,5.8vw,48px);line-height:1.12;}
+  .hero p.lead{font-size:17px;color:var(--ink-soft);max-width:40em;margin:16px 0 26px;}
   .cta-row{display:flex;flex-wrap:wrap;gap:12px;}
-  .btn{
-    display:inline-flex;align-items:center;gap:9px;text-decoration:none;
-    padding:13px 22px;border-radius:999px;font-size:14.5px;font-weight:600;
-    border:1px solid var(--line);background:#fff;
-  }
-  .btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink);}
-  .btn.primary:hover{background:#000;}
-  .btn:hover{border-color:var(--accent);color:var(--accent);}
-  .btn.primary:hover{color:var(--paper);}
+  .btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;padding:14px 22px;border-radius:6px;
+    font-size:14.5px;font-weight:600;border:1px solid var(--line);background:#fff;}
+  .btn.primary{background:var(--blue);border-color:var(--blue);color:#fff;}
+  .btn.primary:hover{background:var(--blue-deep);}
+  .btn:hover{border-color:var(--blue);color:var(--blue);}
 
-  /* Bandeau infos */
-  .facts{
-    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    background:var(--paper-2);
-  }
-  .facts .wrap{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-    gap:2px;padding:0;
-  }
-  .fact{padding:20px;} 
+  .facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper-2);}
+  .facts .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));padding:0;}
+  .fact{padding:20px;}
   .fact + .fact{border-left:1px solid var(--line);}
   .fact span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;}
   .fact strong{font-size:15px;font-weight:600;}
-  .fact a{text-decoration:none;border-bottom:1px solid var(--accent);}
+  .fact a{text-decoration:none;border-bottom:1px solid var(--blue);}
 
-  /* Sections */
   section.blk{padding:52px 0;}
-  section.blk h2{font-size:clamp(22px,3.4vw,30px);margin-bottom:8px;}
-  .sub{color:var(--ink-soft);font-size:15px;max-width:40em;margin:0 0 28px;}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;}
-  .card{
-    background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;
-  }
-  .card .ico{font-size:22px;margin-bottom:10px;}
-  .card h3{font-size:17.5px;margin-bottom:6px;}
+  section.blk h2{font-size:clamp(22px,3.3vw,30px);margin-bottom:8px;}
+  .sub{color:var(--ink-soft);font-size:15px;max-width:42em;margin:0 0 28px;}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;border-top:3px solid var(--blue);}
+  .card h3{font-size:17.5px;margin-bottom:8px;}
   .card p{margin:0;font-size:14.5px;color:var(--ink-soft);}
 
-  /* Visite */
-  .visit{background:var(--ink);color:var(--paper);}
-  .visit h2{color:var(--paper);}
-  .visit .sub{color:#cfc7ba;}
-  .visit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:6px;}
-  .visit .item{padding:20px;border:1px solid rgba(255,255,255,.16);border-radius:14px;}
-  .visit .item span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#b9ad9b;display:block;margin-bottom:8px;}
-  .visit .item strong{font-size:16px;font-weight:600;line-height:1.45;}
-  .visit a.map{color:var(--paper);text-decoration:none;border-bottom:1px solid #b9ad9b;}
-  .visit a.map:hover{border-color:#fff;}
+  .steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;}
+  .step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px;}
+  .step:before{counter-increment:s;content:counter(s);display:flex;align-items:center;justify-content:center;
+    width:26px;height:26px;border-radius:50%;background:var(--blue-soft);color:var(--blue);
+    font-weight:700;font-size:13px;margin-bottom:10px;}
+  .step h3{font-size:16px;margin-bottom:6px;}
+  .step p{margin:0;font-size:14px;color:var(--ink-soft);}
 
-  footer{
-    padding:30px 20px 40px;text-align:center;
-    font-size:12.5px;color:var(--ink-soft);
-    border-top:1px solid var(--line);
-  }
-  footer a{color:var(--accent);text-decoration:none;}
+  .mapwrap{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;}
+  .mapwrap iframe{display:block;width:100%;height:320px;border:0;}
+
+  .visit{background:var(--velvet);color:#eef2f7;border-radius:10px;}
+  .visit-inner{padding:26px 20px;}
+  .visit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
+  .visit .item{padding:20px;border:1px solid rgba(255,255,255,.16);border-radius:10px;}
+  .visit .item span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9fb0c4;display:block;margin-bottom:8px;}
+  .visit .item strong{font-size:16px;font-weight:600;line-height:1.45;}
+  .visit a.map{color:#fff;text-decoration:none;border-bottom:1px solid #9fb0c4;}
+
+  footer{padding:30px 20px 42px;text-align:center;font-size:12.5px;color:var(--ink-soft);border-top:1px solid var(--line);}
   @media(max-width:640px){
     .top nav{display:none;}
     .fact + .fact{border-left:0;border-top:1px solid var(--line);}
-    .hero{padding:40px 0 34px;}
+    .hero{padding:38px 0 34px;}
   }
 </style>
 </head>
-<body>
+<body class="plaid">
 
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top">
       <span class="monogram">C</span>
-      <span><b>Caputo</b><small>Mode &amp; décoration</small></span>
+      <span><b>Caputo</b><small>Tailleur sur mesure</small></span>
     </a>
     <nav>
-      <a href="#boutique">La boutique</a>
+      <a href="#atelier">L'atelier</a>
+      <a href="#commande">La commande</a>
       <a href="#visite">Nous trouver</a>
     </nav>
     <a class="call-btn" href="tel:+32485745173">📞 0485 74 51 73</a>
@@ -155,14 +128,15 @@
 <section class="hero">
   <div class="wrap">
     <div class="eyebrow">Galerie du Cinquantenaire · Etterbeek</div>
-    <h1>Caputo, mode et décoration<br>au cœur d'Etterbeek</h1>
+    <h1>Caputo, tailleur sur mesure<br>à Etterbeek</h1>
     <p class="lead">
-      Avenue de Tervueren 32, dans la Galerie du Cinquantenaire : une boutique de mode et de
-      décoration à deux pas du parc. Passez nous voir ou appelez-nous, on vous renseigne avec plaisir.
+      Un atelier de couture à la Galerie du Cinquantenaire, Avenue de Tervueren 32.
+      Des pièces réalisées à vos mesures, dans le tissu que vous choisissez, ajustées
+      jusqu'à ce qu'elles tombent juste.
     </p>
     <div class="cta-row">
-      <a class="btn primary" href="tel:+32485745173">📞 Appeler la boutique</a>
-      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Galerie+du+Cinquantenaire%2C+Avenue+de+Tervueren+32%2C+1040+Etterbeek" target="_blank" rel="noopener">📍 Itinéraire</a>
+      <a class="btn primary" href="tel:+32485745173">📞 Appeler l'atelier</a>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Caputo+Galerie+du+Cinquantenaire+Avenue+de+Tervueren+32+1040+Etterbeek" target="_blank" rel="noopener">📍 Itinéraire</a>
     </div>
   </div>
 </section>
@@ -171,68 +145,78 @@
   <div class="wrap">
     <div class="fact"><span>Adresse</span><strong>Av. de Tervueren 32<br>Galerie du Cinquantenaire<br>1040 Etterbeek</strong></div>
     <div class="fact"><span>Téléphone</span><strong><a href="tel:+32485745173">0485 74 51 73</a></strong></div>
-    <div class="fact"><span>Quartier</span><strong>Cinquantenaire — Etterbeek</strong></div>
+    <div class="fact"><span>Atelier</span><strong>Sur mesure &amp; tissus<br>Galerie du Cinquantenaire</strong></div>
   </div>
 </section>
 
-<section class="blk" id="boutique">
+<section class="blk" id="atelier">
   <div class="wrap">
-    <h2>La boutique</h2>
+    <h2>L'atelier</h2>
     <p class="sub">
-      Un commerce de proximité dans la Galerie du Cinquantenaire, à quelques minutes du parc et de
-      la place Jourdan. Voici ce que vous y trouvez :
+      Ici, tout part de vos mesures et du tissu — pas d'un stock à écouler. Ce que vous trouvez chez Caputo :
     </p>
     <div class="cards">
       <div class="card">
-        <div class="ico">👗</div>
-        <h3>Mode</h3>
-        <p>Une sélection de vêtements à découvrir en boutique, à essayer sur place.</p>
+        <h3>Vêtements sur mesure</h3>
+        <p>Une pièce coupée et assemblée à vos mesures, avec essayage et retouches jusqu'au tombé final.</p>
       </div>
       <div class="card">
-        <div class="ico">🕯️</div>
-        <h3>Décoration</h3>
-        <p>Des pièces et objets pour habiller votre intérieur, à offrir ou à s'offrir.</p>
+        <h3>Tissus &amp; finitions</h3>
+        <p>Une sélection de tissus à découvrir à l'atelier : lainages, velours, tissus à carreaux, doublures.</p>
       </div>
       <div class="card">
-        <div class="ico">💬</div>
-        <h3>Conseil</h3>
-        <p>Vous cherchez une taille, une idée cadeau ? Appelez-nous, on vous dit ce qu'on a en stock.</p>
+        <h3>Prise de mesures à l'atelier</h3>
+        <p>On relève vos mesures sur place et on vous dit ce qui est réalisable, les délais et le tissu à prévoir.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="blk visit" id="visite">
+<section class="blk" id="commande">
+  <div class="wrap">
+    <h2>Comment se passe une commande</h2>
+    <p class="sub">Quatre étapes, du premier appel à la remise de la pièce.</p>
+    <div class="steps">
+      <div class="step"><h3>Prise de contact</h3><p>Un appel ou un passage à l'atelier : on cadre le projet, la pièce et le tissu.</p></div>
+      <div class="step"><h3>Prise de mesures</h3><p>Relevé complet des mesures à l'atelier, choix du tissu et des finitions.</p></div>
+      <div class="step"><h3>Essayage</h3><p>Essayage intermédiaire et retouches d'ajustement jusqu'au résultat attendu.</p></div>
+      <div class="step"><h3>Remise</h3><p>Dernier contrôle, finitions, repassage et remise de la pièce.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="visite">
   <div class="wrap">
     <h2>Nous trouver</h2>
-    <p class="sub">En plein cœur de la Galerie du Cinquantenaire, facile d'accès en tram, bus ou à pied depuis le parc.</p>
-    <div class="visit-grid">
-      <div class="item">
-        <span>Adresse</span>
-        <strong>Caputo<br>Galerie du Cinquantenaire<br>Avenue de Tervueren 32<br>1040 Etterbeek</strong>
+    <p class="sub">À l'intérieur de la Galerie du Cinquantenaire, à deux pas du parc.</p>
+    <div class="visit">
+      <div class="visit-inner">
+        <div class="visit-grid">
+          <div class="item"><span>Adresse</span><strong>Caputo<br>Galerie du Cinquantenaire<br>Avenue de Tervueren 32<br>1040 Etterbeek</strong></div>
+          <div class="item"><span>Téléphone</span><strong><a class="map" href="tel:+32485745173">0485 74 51 73</a></strong></div>
+          <div class="item"><span>Itinéraire</span><strong><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Caputo+Galerie+du+Cinquantenaire+Avenue+de+Tervueren+32+1040+Etterbeek" target="_blank" rel="noopener">Ouvrir dans Google Maps →</a></strong></div>
+        </div>
       </div>
-      <div class="item">
-        <span>Téléphone</span>
-        <strong><a class="map" href="tel:+32485745173">0485 74 51 73</a></strong>
-      </div>
-      <div class="item">
-        <span>Itinéraire</span>
-        <strong><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Galerie+du+Cinquantenaire%2C+Avenue+de+Tervueren+32%2C+1040+Etterbeek" target="_blank" rel="noopener">Ouvrir dans Google Maps →</a></strong>
-      </div>
+    </div>
+    <div class="mapwrap" style="margin-top:20px;">
+      <iframe title="Carte — Caputo, Galerie du Cinquantenaire, Etterbeek"
+        src="https://maps.google.com/maps?q=Galerie%20du%20Cinquantenaire%2C%20Avenue%20de%20Tervueren%2032%2C%201040%20Etterbeek&amp;z=16&amp;output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
 
 <footer>
-  &copy; 2026 Caputo — Etterbeek · Site réalisé par William Prové
+  &copy; 2026 Caputo — Tailleur sur mesure · Avenue de Tervueren 32, 1040 Etterbeek · 0485 74 51 73<br>
+  Site réalisé par William Prové
 </footer>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ClothingStore",
+  "@type": "Tailor",
   "name": "Caputo",
-  "description": "Boutique de mode et de décoration à la Galerie du Cinquantenaire, Etterbeek.",
+  "description": "Tailleur sur mesure à Etterbeek — atelier de couture à la Galerie du Cinquantenaire.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Galerie du Cinquantenaire, Avenue de Tervueren 32",
